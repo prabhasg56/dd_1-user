@@ -1,4 +1,5 @@
 const users = {
+    const users = {
     "John": {
         age: 24,
         desgination: "Senior Golang Developer",
@@ -55,9 +56,7 @@ const usersArray = Object.entries(users);
 
 // const videoGameInt = usersArray.filter((itemData) => {
 //     let hobbies = itemData[1].interests;
-//     if (hobbies.includes("Video Games")) {
-//         return true;
-//     }
+//     return hobbies.includes("Video Games");
 // });
 
 // console.log(videoGameInt);
@@ -65,9 +64,7 @@ const usersArray = Object.entries(users);
 //Q2. Find all users staying in Germany.
 
 const stayLocation = usersArray.filter((userData) => {
-    if (userData[1].nationality === "Germany") {
-        return true;
-    }
+    return (userData[1].nationality === "Germany");
 
 });
 console.log(stayLocation);
@@ -75,8 +72,6 @@ console.log(stayLocation);
 //Q4 Find all users with masters Degree.
 
 const degreeMaster = usersArray.filter((userData) => {
-    if (userData[1].qualification === "Masters") {
-        return true;
-    }
+    return (userData[1].qualification === "Masters");
 });
 console.log(degreeMaster);

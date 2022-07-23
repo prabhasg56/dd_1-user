@@ -62,10 +62,18 @@ const usersArray = Object.entries(users);
 
 // console.log(videoGameInt);
 
-//Find all users staying in Germany.
+//Q2. Find all users staying in Germany.
 
 const stayLocation=usersArray.filter((userData)=>{
     if(userData[1].nationality==="Germany")
     return true;
 });
 console.log(stayLocation);
+
+//Q4 Find all users with masters Degree.
+
+const degreeMaster=usersArray.filter((userData)=>{
+    if(userData[1].qualification==="Masters")
+    return true;
+});
+console.log(degreeMaster);

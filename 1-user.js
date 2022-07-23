@@ -64,16 +64,19 @@ const usersArray = Object.entries(users);
 
 //Q2. Find all users staying in Germany.
 
-const stayLocation=usersArray.filter((userData)=>{
-    if(userData[1].nationality==="Germany")
-    return true;
+const stayLocation = usersArray.filter((userData) => {
+    if (userData[1].nationality === "Germany") {
+        return true;
+    }
+
 });
 console.log(stayLocation);
 
 //Q4 Find all users with masters Degree.
 
-const degreeMaster=usersArray.filter((userData)=>{
-    if(userData[1].qualification==="Masters")
-    return true;
+const degreeMaster = usersArray.filter((userData) => {
+    if (userData[1].qualification === "Masters") {
+        return true;
+    }
 });
 console.log(degreeMaster);

@@ -1,5 +1,4 @@
 const users = {
-    const users = {
     "John": {
         age: 24,
         desgination: "Senior Golang Developer",
@@ -24,7 +23,7 @@ const users = {
     "Rob": {
         age: 34,
         desgination: "Senior Javascript Developer",
-        interest: ["Walking his dog, Cooking"],
+        interests: ["Walking his dog, Cooking"],
         qualification: "Masters",
         nationality: "USA"
     },
@@ -52,12 +51,13 @@ Q5 Group users based on their Programming language mentioned in their designatio
 */
 const usersArray = Object.entries(users);
 
-//Find all users who are interested in video games.
+//Q1. Find all users who are interested in video games.
 
-// const videoGameInt = usersArray.filter((itemData) => {
-//     let hobbies = itemData[1].interests;
-//     return hobbies.includes("Video Games");
-// });
+const videoGameInt = usersArray.filter((itemData) => {
+    let hobbies = itemData[1].interests[0].includes("Video Games");
+   
+    return hobbies;
+}).map((val, ind)=> val[0]);
 
 // console.log(videoGameInt);
 
@@ -67,11 +67,21 @@ const stayLocation = usersArray.filter((userData) => {
     return (userData[1].nationality === "Germany");
 
 });
-console.log(stayLocation);
+// console.log(stayLocation);
+
+// Q3 Sort users based on their seniority level 
+//    for Designation - Senior Developer > Developer > Intern
+//    for Age - 20 > 10
+
+let sortedUsers = usersArray.sort((a,b)=>console.log(a))
+
 
 //Q4 Find all users with masters Degree.
 
-const degreeMaster = usersArray.filter((userData) => {
-    return (userData[1].qualification === "Masters");
-});
-console.log(degreeMaster);
+// const degreeMaster = usersArray.filter((userData) => {
+//     return (userData[1].qualification === "Masters");
+// });
+// console.log(degreeMaster);
+
+// Q5 Group users based on their Programming language mentioned in their designation.
+
